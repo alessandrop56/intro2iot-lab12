@@ -39,7 +39,7 @@ bool isRoomDark() {
   Serial.println(lightLevel);
 
   // TODO: Fix this logic so it returns true when it's dark
-  return false; // <-- incorrect for now
+  return lightLevel < darkThreshold; // <-- incorrect for now
 }
 
 // ===============================
@@ -51,7 +51,7 @@ bool isButtonActivated() {
 
   // TODO: Fix this logic and print the correct status
   // Button is normally HIGH
-  if (state == HIGH) {
+  if (state == LOW) {
     // Button not pressed
     return true;
   } else {
