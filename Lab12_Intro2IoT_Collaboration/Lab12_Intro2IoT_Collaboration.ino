@@ -51,7 +51,7 @@ bool isButtonActivated() {
 
   // TODO: Fix this logic and print the correct status
   // Button is normally HIGH
-  if (state == HIGH) {
+  if (state == LOW) {
     // Button not pressed
     return true;
   } else {
